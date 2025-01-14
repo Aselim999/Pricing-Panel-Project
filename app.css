@@ -53,14 +53,14 @@ html {
 }
 
 body {
-    background-color: #60a9ff;
+	background-color: #60a9ff;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
-}
+  }
 
-.panel {
+  .panel {
 	background-color: white;
 	border-radius: 10px;
 	padding: 15px 25px;
@@ -70,7 +70,7 @@ body {
 	flex-direction: column;
 	text-align: center;
 	text-transform: uppercase;
-}
+  }
 
 .pricing-plan {
 	border-bottom: 1px solid #e1f1ff;
@@ -114,4 +114,44 @@ body {
 	display: block;
 	font-size: 32px;
 	font-weight: 700;
+}
+
+.pricing-button {
+	border: 1px solid #60a9ff;
+	border-radius: 10px;
+	color: #348efe;
+	display: inline-block;
+	padding: 15px 35px;
+	text-decoration: none;
+	margin: 25px 0;
+	transition: background-color 200ms ease-in-out;
+}
+
+.pricing-button:hover,  .pricing-button:focus {
+	background-color: #e1f1ff;
+}
+
+.pricing-button.is-featured {
+	background-color: #48aaff;
+	color: white;
+}
+
+.pricing-button.is-featured:hover,  .pricing-button.is-featured:focus{
+	background-color: #269aff;
+	color: white;
+}
+
+
+@media (min-width: 900px) {
+	.panel{
+		flex-direction: row;
+	}
+	.pricing-plan {
+		border-bottom: none;
+		border-right: 1px solid #e1f1ff;
+		padding: 25px 50px;
+	}
+	.pricing-plan:last-child {
+		border-right: none;
+	}
 }
